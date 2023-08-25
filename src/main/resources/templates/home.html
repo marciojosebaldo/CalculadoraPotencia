@@ -19,9 +19,9 @@
 
     <form action="/" method="post">
     <input id="numero" name="numero" type="number" class="form-control" placeholder="Digite um número" aria-label="Username"
-           aria-describedby="basic-addon1">
+           aria-describedby="basic-addon1" th:value="${numero}">
         <div class="col-sm-12 mt-2 text-right">
-            <input value="Calcular" type="submit" class="btn btn-primary" th:value="${numero}">
+            <input value="Calcular" type="submit" class="btn btn-primary">
         </div>
     </form>
 

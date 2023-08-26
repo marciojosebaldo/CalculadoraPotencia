@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-    <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -18,16 +18,21 @@
     <h1 class="text-center mt-5">Potência</h1>
 
     <form action="/" method="post">
-    <input id="numero" name="numero" type="number" class="form-control" placeholder="Digite um número" aria-label="Username"
-           aria-describedby="basic-addon1" th:value="${numero}">
-        <div class="col-sm-12 mt-2 text-right">
-            <input value="Calcular" type="submit" class="btn btn-primary">
+        <input id="numero" name="numero" type="number" class="form-control" placeholder="Digite um número"
+               aria-label="Username"
+               aria-describedby="basic-addon1" th:value="${numero}">
+        <div class="text-center">
+            <div class="col-sm-12 mt-2">
+                <input value="Calcular" type="submit" class="btn btn-primary">
+            </div>
         </div>
     </form>
 
     <div th:if="${resultado}" class="mt-5 text-center">
-    <div><h4>Resultado</h4></div>
-    <h2><div th:utext="${resultado}"></div></h2>
+        <div><h4>Resultado</h4></div>
+        <h2>
+            <div th:utext="${resultado}"></div>
+        </h2>
     </div>
 </div>
 </body>
